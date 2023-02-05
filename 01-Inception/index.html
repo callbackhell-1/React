@@ -7,14 +7,38 @@
     <title>Title</title>
   </head>
   <body>
+    <!-- using HTML -->
     <h1>Hello world</h1>
+
+    <!-- using JS -->
     <div id="usingJs"></div>
+
+    <!-- using react -->
+    <div id="root"></div>
   </body>
 
-  <script>
+  <!------------ using JS--------------- -->
+  <!-- <script>
     const usingJs = document.getElementById("usingJs");
     const h1 = document.createElement("h1");
     h1.innerHTML = "Hello world";
     usingJs.append(h1);
+  </script> -->
+
+  <!---------- using react ------------->
+
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script>
+    const heading = React.createElement("h1", {}, "Hello World Again");
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    root.render(heading);
   </script>
 </html>
