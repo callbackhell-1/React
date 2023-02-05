@@ -8,5 +8,13 @@
   </head>
   <body>
     <h1>Hello world</h1>
+    <div id="usingJs"></div>
   </body>
+
+  <script>
+    const usingJs = document.getElementById("usingJs");
+    const h1 = document.createElement("h1");
+    h1.innerHTML = "Hello world";
+    usingJs.append(h1);
+  </script>
 </html>
